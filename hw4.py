@@ -121,12 +121,12 @@ def execute_operations(demographics,operations):
             elif split_ops[0]=='percent':
                 percent(demographics,split_ops[1])
             else:
-                print("Invalid key used")
-        except ValueError:
+                print("Invalid key used") #If key wasn't correct
+        except ValueError:  #To show if there isn't a numerical value
             print("Error: There is no number entered in line ", line_num)
-        except IndexError:
+        except IndexError: #If any index error happened and it would show what line
             print("Error: Unsupported on line: ",line_num)
-        except KeyError:
+        except KeyError: #To show if there was a key error
             print("Key Not Correctly Used on line: ",line_num)
         line_num+=1
 #Main function to test it out
